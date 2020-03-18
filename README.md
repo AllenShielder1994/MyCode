@@ -7,4 +7,4 @@
 (3) Remover all images due to the privacy.  
 (4) Change all the program in test.py and it will only allow to do some code or function test in next program.  
 
-<img src ="./test.png" width="80%" height="80%" aligh="middle" alt="19/03/2020" >![Figure 1](./test.png)
+<img src ="./test.png" width="80%" height="80%" aligh="middle" alt="19/03/2020" >
