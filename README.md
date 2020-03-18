@@ -7,4 +7,4 @@
 (3) Remover all images due to the privacy.  
 (4) Change all the program in test.py and it will only allow to do some code or function test in next program.  
 
-![Figure 1] (C:\Users\TF2016\Desktop\proj\test.png)
+![Figure 1](./test.png)
