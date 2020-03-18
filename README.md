@@ -7,5 +7,4 @@
 (3) Remover all images due to the privacy.  
 (4) Change all the program in test.py and it will only allow to do some code or function test in next program.  
 
-<div img src ="./test.png" width="60%" height="60%" align="center" />
-</div>
+<div img src ="./test.png" width="60%" height="60%" align="center"> </div>
