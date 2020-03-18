@@ -23,8 +23,6 @@ lower =np.array([145,130,160])
 upper =np.array([180,255,255])
 
 
-
-
 green = (0, 255, 0)
 blue  = (255, 0, 0)
 red   = (0, 0, 255)

@@ -51,7 +51,6 @@ while True:
     flat,newImg = cap.read()
         # the picuture info is in the "newImg"
 
-
     hsv_frame = cv2.cvtColor(newImg,cv2.COLOR_BGR2HSV)#将图片由BGR颜色空间转化成HSV空间，HSV可以更好地分割颜色图形
     lower[0]=cv2.getTrackbarPos("H_l","image")#获取"H_l"滑块的实时值
     upper[0]=cv2.getTrackbarPos("H_h","image")#获取"H_h"滑块的实时值
