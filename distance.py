@@ -48,7 +48,7 @@ while True:
 
     for i in range(0,len(conts)):  
         x, y, w, h = cv2.boundingRect(conts[i])   
-        cv2.rectangle(img, (x,y), (x+w,y+h), (153,153,0), 5) 
+        cv2.rectangle(img, (x,y), (x+w,y+h), (153,153,0), 2) 
 
     cv2.imshow("img",img)
     #print (conts)

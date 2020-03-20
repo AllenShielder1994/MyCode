@@ -26,11 +26,14 @@ upper =np.array([180,255,255])
 green = (0, 255, 0)
 blue  = (255, 0, 0)
 red   = (0, 0, 255)
-
+x=0
+y=0
 x_colllect =0
 y_colllect =0
 time =1
 current_position =0
+current_position_x =0
+current_position_y =0
 
 def show_distance (trgt_length,focallength,per_length):
     
@@ -43,7 +46,7 @@ def show_distance (trgt_length,focallength,per_length):
 cap=cv2.VideoCapture(0)
 while True:
     
-    sucess,img=cap.read() #从摄像头读取图片
+    arg,img=cap.read() #从摄像头读取图片
 
  
    # cv2.imshow("img",img)
@@ -62,26 +65,35 @@ while True:
 
     for i in range(0,len(conts)):  
         x, y, w, h = cv2.boundingRect(conts[i])   
-        cv2.rectangle(img, (x,y), (x+w,y+h), green, 2) 
+        cv2.rectangle(img, (x, y), (x + w, y + h), green, 2) 
         #show_distance (10,20,h)
 
+   
+   
+   
     check_time =11
     correction_value =5
        
     if time <check_time:
         #print (time)
-        x_colllect = x_colllect + x
+        x_colllect = x_colllect + x + (w/2)
+        y_colllect = y_colllect + y + (h/2)
         # print (x_colllect,x)
         time=time+1
-    
     else :
     # print ("result:")
-        if ((x_colllect / check_time) < (current_position-correction_value)) or ((x_colllect / check_time) > (current_position+correction_value)):
-            current_position = x_colllect/check_time
+        if ((x_colllect / check_time) < (current_position_x-correction_value)) or ((x_colllect / check_time) > (current_position_x+correction_value)):
+            current_position_x = x_colllect/check_time
             #print (current_position, x_colllect)
+        if ((y_colllect / check_time) < (current_position_y-correction_value)) or ((y_colllect / check_time) > (current_position_y+correction_value)):
+            current_position_y = y_colllect/check_time
+            
+            current_position= (current_position_x, current_position_y)
+
             print (current_position)
             #print ("END:")
         x_colllect = 0
+        y_colllect = 0
         time =1
 
     
